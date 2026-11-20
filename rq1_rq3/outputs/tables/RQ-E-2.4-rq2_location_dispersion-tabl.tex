@@ -1,0 +1,28 @@
+\begin{table}[htb]
+    \centering
+    \small
+    \caption{Reproductibilité de la localisation et de la dispersion : comparaison de l'instabilité intra-trace ($\mathrm{RCV}_{\mathrm{OQAD}}$) et de la dérive inter-campagnes sur NVIDIA V100 et AMD MI210 selon les régimes d'horloge et la configuration du harnais.}
+    \label{tab:rq2_location_dispersion}
+    \renewcommand{\arraystretch}{1.25}
+    \begin{tabular}{lllccc}
+        \toprule
+        \textbf{Plateforme} & \textbf{Horloges} & \textbf{Harnais} & 
+        \textbf{Intra $\mathrm{RCV}_{\mathrm{OQAD}}$ (\%)} & 
+        \textbf{$\Delta m$ (\%)} & 
+        \textbf{$\Delta \mathrm{RCV}_{\mathrm{OQAD}}$ (pp)} \\
+        \midrule
+        \multirow{4}{*}{\textbf{V100}} 
+        & Verrouillées & Complet  & $0{,}54$ & $0{,}00$ & $0{,}000$ \\
+        & Verrouillées & Minimal  & $0{,}57$ & $0{,}00$ & $0{,}000$ \\
+        & Libres       & Complet  & $0{,}91$ & $0{,}12$ & $0{,}045$ \\
+        & Libres       & Minimal  & $0{,}97$ & $0{,}10$ & $0{,}059$ \\
+        \midrule
+        \multirow{4}{*}{\textbf{MI210}} 
+        & Verrouillées & Complet  & $0{,}94$ & $0{,}11$ & $0{,}033$ \\
+        & Verrouillées & Minimal  & $0{,}78$ & $0{,}09$ & $0{,}030$ \\
+        & Libres       & Complet  & $0{,}72$ & $0{,}10$ & $0{,}035$ \\
+        & Libres       & Minimal  & $0{,}66$ & $0{,}09$ & $0{,}025$ \\
+        \bottomrule
+    \end{tabular}
+    \vspace{0.15cm}
+\end{table}

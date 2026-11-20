@@ -1,0 +1,23 @@
+\begin{table}[!htb]
+    \centering
+    \small
+    \caption{\smsp{}, \smsz{} et budget fixe $N = 600$ sur les campagnes de test 3, 6 et 9 (écarts de $N^*$ : HL apparié par cellule). Parts d'échecs de $N = 2\,000$ : $3{,}01 / 0{,}42 / 0{,}75\,\%$ (V100 verr. / MI210 verr. / MI210 libres).}
+    \label{tab:rq3_test}
+    \renewcommand{\arraystretch}{1.25}
+    \setlength{\tabcolsep}{4pt}
+    \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+    \begin{tabular}{lccccc}
+        \toprule
+         & \multicolumn{2}{c}{\textbf{$N^*$ moyen}} & \multicolumn{3}{c}{\textbf{Excès ($U_{95}$), pp}} \\
+        \cmidrule(lr){2-3}\cmidrule(lr){4-6}
+        \textbf{Règle} & \textbf{V100} & \textbf{MI210} & \textbf{V100 verr.} & \textbf{MI210 verr.} & \textbf{MI210 libres} \\
+        \midrule
+        \smsp{} ($\alpha = 0{,}70$, $S = 10$) & $485$ & $490$ & $+0{,}23\;(0{,}58)$ & $+0{,}75\;(1{,}50)$ & $-0{,}42\;(0{,}00)$ \\
+        \smsz{} ($\alpha = 0{,}25$, $S = 10$) & $447$ & $477$ & $+0{,}23\;(0{,}58)$ & $+0{,}58\;(1{,}17)$ & $-0{,}42\;(0{,}00)$ \\
+        $N$ fixe $= 600$ & $636$ & $645$ & $+0{,}23\;(0{,}58)$ & $+0{,}58\;(1{,}17)$ & $-0{,}08\;(0{,}00)$ \\
+        \midrule
+        Écart \smsp{} $-$ \smsz{} [IC à 95 \%] & $+17\;[+12 ; +25]$ & $+4\;[+2 ; +8]$ & $+0{,}00\;[+0{,}00 ; +0{,}00]$ & $+0{,}17\;[+0{,}00 ; +0{,}50]$ & $+0{,}00\;[+0{,}00 ; +0{,}00]$ \\
+        Écart \smsp{} $-$ $N$ fixe $= 600$ [IC à 95 \%] & $-150\;[-167 ; -136]$ & $-150\;[-154 ; -138]$ & $+0{,}00\;[+0{,}00 ; +0{,}00]$ & $+0{,}17\;[+0{,}00 ; +0{,}50]$ & $-0{,}33\;[-0{,}83 ; +0{,}00]$ \\
+        \bottomrule
+    \end{tabular}}
+\end{table}

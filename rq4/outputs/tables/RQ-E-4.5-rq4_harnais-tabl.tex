@@ -1,0 +1,24 @@
+\begin{table}[!htb]
+    \centering
+    \small
+    \caption{Coût, part au plafond, reproductibilité de la décision ($\Delta N^*$) et part d'échecs par stratégie, selon le harnais.}
+    \label{tab:rq4_harnais}
+    \renewcommand{\arraystretch}{1.25}
+    \setlength{\tabcolsep}{3pt}
+    \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+    \begin{tabular}{llcccccccc}
+        \toprule
+        \multirow{2}{*}{\textbf{Plateforme}} & \multirow{2}{*}{\textbf{Stratégie}} & \multicolumn{2}{c}{\textbf{$N^*$ moyen}} & \multicolumn{2}{c}{\textbf{Au plafond (\%)}} & \multicolumn{2}{c}{\textbf{$\Delta N^*$ médian (\%)}} & \multicolumn{2}{c}{\textbf{Échecs (\%)}} \\
+        \cmidrule(lr){3-4} \cmidrule(lr){5-6} \cmidrule(lr){7-8} \cmidrule(lr){9-10}
+         &  & \texttt{Minimal} & \texttt{Complet} & \texttt{Minimal} & \texttt{Complet} & \texttt{Minimal} & \texttt{Complet} & \texttt{Minimal} & \texttt{Complet} \\
+        \midrule
+        \multirow{7}{*}{MI210} & \smsp & $376$ & $586$ & $18{,}4$ & $68{,}9$ & $17{,}7$ & $0{,}0$ & $3{,}90$ & $2{,}27$ \\
+         & \smsz & $324$ & $586$ & $12{,}5$ & $68{,}8$ & $7{,}2$ & $0{,}0$ & $3{,}95$ & $2{,}23$ \\
+         & $N$ fixe $\geq 600$ & $600$ & $690$ & --- & --- & --- & --- & $4{,}03$ & $2{,}75$ \\
+         & $N$ fixe $\geq 2\,000$ & $2\,000$ & $2\,126$ & --- & --- & --- & --- & $0{,}83$ & $1{,}40$ \\
+         & PrimBench & $1\,712$ & $1\,836$ & $72{,}0$ & $72{,}0$ & $0{,}0$ & $0{,}0$ & $0{,}68$ & $1{,}23$ \\
+         & NVBench \texttt{stdrel} & $6\,536$ & $6\,700$ & $0{,}0$ & $0{,}0$ & $2{,}6$ & $1{,}6$ & $12{,}30$ & $3{,}60$ \\
+         & NVBench \texttt{entropy} & $568$ & $1\,714$ & $0{,}0$ & $67{,}7$ & $12{,}7$ & $0{,}0$ & $7{,}92$ & $1{,}65$ \\
+        \bottomrule
+    \end{tabular}}
+\end{table}

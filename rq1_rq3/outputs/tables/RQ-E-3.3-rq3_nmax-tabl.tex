@@ -1,0 +1,19 @@
+\begin{table}[!htb]
+    \centering
+    \small
+    \caption{Choix de $N_{\max}$ : excès d'échecs d'un budget fixe face à $N = 2\,000$, en pp, et $U_{95}$ entre parenthèses.}
+    \label{tab:rq3_nmax}
+    \renewcommand{\arraystretch}{1.25}
+    \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+    \begin{tabular}{llccccc}
+        \toprule
+        \textbf{Plateforme} & \textbf{Horloges} & \textbf{$p(2\,000)$ (\%)} & \textbf{$N = 500$} & \textbf{$N = 550$} & \textbf{$N = 600$} & \textbf{$N = 650$} \\
+        \midrule
+        \multirow{2}{*}{V100} & Verrouillées & $3{,}27$ & $+0{,}30\;(0{,}60)$ & $+0{,}20\;(0{,}55)$ & $+0{,}25\;(0{,}55)$ & $+0{,}20\;(0{,}50)$ \\
+         & Libres (non contrainte) & $12{,}95$ & $+1{,}84\;(4{,}32)$ & $+1{,}84\;(4{,}02)$ & $+1{,}88\;(3{,}62)$ & $+1{,}84\;(3{,}37)$ \\
+        \midrule
+        \multirow{2}{*}{MI210} & Verrouillées & $0{,}32$ & $+2{,}32\;(3{,}54)$ & $+1{,}64\;(2{,}57)$ & $+0{,}46\;(0{,}86)$ & $+0{,}11\;(0{,}32)$ \\
+         & Libres & $0{,}29$ & $-0{,}04\;(0{,}00)$ & $-0{,}04\;(0{,}00)$ & $-0{,}04\;(0{,}00)$ & $-0{,}04\;(0{,}00)$ \\
+        \bottomrule
+    \end{tabular}}
+\end{table}

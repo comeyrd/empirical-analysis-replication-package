@@ -1,0 +1,16 @@
+# Build, environment, caches
+build*/
+bin/
+.venv/
+__pycache__/
+*.log
+.*
+!.gitignore
+!.gitattributes
+
+# Data (raw reports and derived files, see README), data archives, local archive
+*/data/
+*.tar.gz
+_archive/
+*-results/
+!derived-data.tar.gz

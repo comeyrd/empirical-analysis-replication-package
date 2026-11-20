@@ -1,0 +1,28 @@
+\begin{table}[!htb]
+    \centering
+    \small
+    \caption{Combinaisons de C0, C1 et C2 à $\alpha = 0{,}70,\ S = 10$ fixés.}
+    \label{tab:rq3_factorial}
+    \renewcommand{\arraystretch}{1.25}
+    \setlength{\tabcolsep}{4pt}
+    \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+    \begin{tabular}{lcccccccc}
+        \toprule
+         & \multicolumn{2}{c}{\textbf{$N^*$ moyen}} & \multicolumn{2}{c}{\textbf{Au plafond (\%)}} & \multicolumn{3}{c}{\textbf{Excès (pp)}} & \\
+        \cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-8}
+        \textbf{Conditions} & \textbf{V100} & \textbf{MI210} & \textbf{V100} & \textbf{MI210} & \textbf{V100 verr.} & \textbf{MI210 verr.} & \textbf{MI210 libres} & \textbf{$P$ (\%)} \\
+        \midrule
+        C0 & $372$ & $406$ & $23{,}9$ & $26{,}9$ & $+0{,}15$ & $+7{,}11$ & $+1{,}07$ & $0{,}0$ \\
+        C0 + C1 (sans C2) & $477$ & $471$ & $46{,}6$ & $39{,}9$ & $+0{,}25$ & $+2{,}89$ & $+0{,}50$ & $0{,}0$ \\
+        \smsp{} (C0 + C1 + C2) & $487$ & $489$ & $49{,}1$ & $42{,}9$ & $+0{,}25$ & $+0{,}54$ & $+0{,}00$ & $97{,}7$ \\
+        \midrule
+        C1 + C2 (sans C0) & $486$ & $488$ & $48{,}7$ & $41{,}3$ & $+0{,}25$ & $+1{,}79$ & $+0{,}04$ & $5{,}2$ \\
+        C0 + C2 (sans C1) & $406$ & $455$ & $29{,}1$ & $32{,}7$ & $+0{,}25$ & $+1{,}14$ & $+0{,}04$ & $36{,}9$ \\
+        \midrule
+        C1 seule & $476$ & $466$ & $46{,}2$ & $38{,}1$ & $+0{,}25$ & $+5{,}43$ & $+2{,}61$ & $0{,}0$ \\
+        C2 seule & $403$ & $450$ & $28{,}5$ & $30{,}6$ & $+0{,}35$ & $+2{,}46$ & $+0{,}07$ & $0{,}2$ \\
+        \midrule
+        Aucune : $N$ fixe $= 600$ & $636$ & $645$ & $100{,}0$ & $100{,}0$ & $+0{,}25$ & $+0{,}46$ & $-0{,}04$ & $98{,}8$ \\
+        \bottomrule
+    \end{tabular}}
+\end{table}

@@ -1,0 +1,17 @@
+\begin{table}[htb]
+    \centering
+    \small
+    \caption{Marge au plancher ($\mathcal{P}$) et masse de la traîne inférieure (observations plus rapides que la médiane d'au moins $2\,\%$ et $3\,\%$) sur AMD MI210 par taille de travail.}
+    \label{tab:mi210_left_tail}
+    \renewcommand{\arraystretch}{1.25}
+    \begin{tabular}{cccc}
+        \toprule
+        \textbf{\texttt{work\_size}} & \textbf{Marge au plancher $\mathcal{P}$} & \textbf{Traîne inférieure ($\ge 2\,\%$)} & \textbf{Traîne inférieure ($\ge 3\,\%$)} \\
+        \midrule
+        \textbf{8}   & $3{,}16\,\%$  & $1{,}18\,\%$ & $0{,}01\,\%$ \\
+        \textbf{32}  & $6{,}41\,\%$  & $1{,}60\,\%$ & $0{,}80\,\%$ \\
+        \textbf{128} & $16{,}48\,\%$ & $1{,}60\,\%$ & $0{,}78\,\%$ \\
+        \textbf{512} & $22{,}60\,\%$ & $0{,}44\,\%$ & $0{,}31\,\%$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}

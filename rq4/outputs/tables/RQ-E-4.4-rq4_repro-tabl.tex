@@ -1,0 +1,22 @@
+\begin{table}[!htb]
+    \centering
+    \small
+    \caption{Reproductibilité de la décision d'arrêt ($\Delta N^*$) et de la mesure ($\Delta m^*$) par stratégie, et écart de $\Delta m^*$ de \smsp à chacune (HL [IC à $95\,\%$]).}
+    \label{tab:rq4_repro}
+    \renewcommand{\arraystretch}{1.25}
+    \setlength{\tabcolsep}{3pt}
+    \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+    \begin{tabular}{llccc}
+        \toprule
+        \textbf{Plateforme} & \textbf{Stratégie} & \textbf{$\Delta N^*$ médian (\%)} & \textbf{$\Delta m^*$ médian (\%)} & \textbf{$\Delta(\Delta m^*)$ (pp) [IC]} \\
+        \midrule
+        \multirow{7}{*}{MI210} & \smsp & $4{,}4$ & $0{,}364$ & --- \\
+         & \smsz & $2{,}0$ & $0{,}338$ & $+0{,}018\;[+0{,}009 ; +0{,}028]$ \\
+         & $N$ fixe $\geq 600$ & --- & $0{,}362$ & $+0{,}003\;[-0{,}008 ; +0{,}014]$ \\
+         & $N$ fixe $\geq 2\,000$ & --- & $0{,}244$ & $+0{,}094\;[+0{,}080 ; +0{,}108]$ \\
+         & PrimBench & $0{,}0$ & $0{,}291$ & $+0{,}056\;[+0{,}044 ; +0{,}068]$ \\
+         & NVBench \texttt{stdrel} & $2{,}1$ & $0{,}266$ & $+0{,}072\;[+0{,}058 ; +0{,}086]$ \\
+         & NVBench \texttt{entropy} & $10{,}4$ & $0{,}306$ & $+0{,}036\;[+0{,}023 ; +0{,}049]$ \\
+        \bottomrule
+    \end{tabular}}
+\end{table}

@@ -1,0 +1,22 @@
+\begin{table}[htb]
+    \centering
+    \small
+    \caption{Résolution temporelle des chronomètres matériels et proportion d'observations ex æquo avec la médiane par plateforme et taille de travail.}
+    \label{tab:seuils-quantification}
+    \renewcommand{\arraystretch}{1.25}
+    \begin{tabular}{llrrrr}
+        \toprule
+        \textbf{Plateforme} & \textbf{\texttt{work\_size}} & \textbf{Pas rel. (\%)} & \textbf{Pas abs. ($\mu$s)} & \textbf{Paliers} & \textbf{Ex æquo $m$ (\%)} \\
+        \midrule
+        \multirow{4}{*}{\textbf{V100}}  & 8   & 1{,}695 & 1{,}024 & 28  & 61{,}10 \\
+        & 32  & 0{,}794 & 1{,}024 & 34  & 52{,}48 \\
+        & 128 & 0{,}226 & 1{,}024 & 51  & 24{,}13 \\
+        & 512 & 0{,}069 & 1{,}024 & 84  & 11{,}80 \\
+        \midrule
+        \multirow{4}{*}{\textbf{MI210}} & 8   & 0{,}349 & 0{,}159 & 77  & 11{,}70 \\
+        & 32  & 0{,}174 & 0{,}159 & 155 & 3{,}80  \\
+        & 128 & 0{,}062 & 0{,}159 & 260 & 1{,}93  \\
+        & 512 & 0{,}018 & 0{,}159 & 346 & 1{,}08  \\
+        \bottomrule
+    \end{tabular}
+\end{table}

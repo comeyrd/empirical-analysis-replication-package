@@ -1,0 +1,28 @@
+\begin{table}[htb]
+    \centering
+    \small
+    \caption{Coût temporel d'une trace de 10\,000 répétitions par taille de travail (\texttt{work\_size}), durée cumulée par configuration et facteur de surcoût relatif à la configuration \texttt{Libres / Minimal}.}
+    \label{tab:rq2_cout_temporel}
+    \renewcommand{\arraystretch}{1.25}
+    \begin{tabular}{lllcccccc}
+        \toprule
+        \textbf{Plateforme} & \textbf{Horloges} & \textbf{Harnais} & 
+        \textbf{\texttt{8} (s)} & \textbf{\texttt{32} (s)} & 
+        \textbf{\texttt{128} (s)} & \textbf{\texttt{512} (s)} & 
+        \textbf{Cumulé (h)} & \textbf{Surcoût} \\
+        \midrule
+        \multirow{4}{*}{\textbf{V100}} 
+        & Verrouillées & \texttt{Complet}  & $1{,}71$ & $2{,}55$ & $6{,}25$ & $17{,}90$ & $3{,}18\,\text{h}$ & $\times 1{,}03$ \\
+        & Verrouillées & \texttt{Minimal}  & $1{,}58$ & $2{,}47$ & $6{,}15$ & $17{,}70$ & $3{,}11\,\text{h}$ & $\times 1{,}01$ \\
+        & Libres       & \texttt{Complet}  & $1{,}64$ & $2{,}52$ & $5{,}92$ & $18{,}05$ & $3{,}10\,\text{h}$ & $\times 1{,}01$ \\
+        & Libres       & \texttt{Minimal}  & $1{,}52$ & $2{,}43$ & $5{,}78$ & $17{,}73$ & $3{,}07\,\text{h}$ & $\times 1{,}00$ \\
+        \midrule
+        \multirow{4}{*}{\textbf{MI210}} 
+        & Verrouillées & \texttt{Complet}  & $0{,}77$ & $1{,}24$ & $2{,}89$ & $10{,}04$ & $3{,}36\,\text{h}$ & $\times 1{,}19$ \\
+        & Verrouillées & \texttt{Minimal}  & $0{,}65$ & $1{,}14$ & $2{,}82$ & $9{,}94$ & $3{,}30\,\text{h}$ & $\times 1{,}17$ \\
+        & Libres       & \texttt{Complet}  & $0{,}74$ & $1{,}16$ & $2{,}64$ & $8{,}51$ & $2{,}87\,\text{h}$ & $\times 1{,}02$ \\
+        & Libres       & \texttt{Minimal}  & $0{,}62$ & $1{,}05$ & $2{,}54$ & $8{,}41$ & $2{,}82\,\text{h}$ & $\times 1{,}00$ \\
+        \bottomrule
+    \end{tabular}
+    \vspace{0.15cm}
+\end{table}

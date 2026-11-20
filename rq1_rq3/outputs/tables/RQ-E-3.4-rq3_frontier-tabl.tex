@@ -1,0 +1,24 @@
+\begin{table}[!htb]
+    \centering
+    \small
+    \caption{Paramétrage de $\alpha$ et $S$ : pour chaque $S$, le $\alpha$ admissible le moins coûteux (entre parenthèses : aucun admissible ; en gras : \smsp{}).}
+    \label{tab:rq3_frontier}
+    \renewcommand{\arraystretch}{1.25}
+    \setlength{\tabcolsep}{4pt}
+    \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+    \begin{tabular}{cccccccccc}
+        \toprule
+         & & \multicolumn{2}{c}{\textbf{$N^*$ moyen}} & \multicolumn{2}{c}{\textbf{Au plafond (\%)}} & \multicolumn{3}{c}{\textbf{Excès (pp)}} & \\
+        \cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){7-9}
+        \textbf{$S$} & \textbf{$\alpha$} & \textbf{V100} & \textbf{MI210} & \textbf{V100} & \textbf{MI210} & \textbf{V100 verr.} & \textbf{MI210 verr.} & \textbf{MI210 libres} & \textbf{$P$ (\%)} \\
+        \midrule
+        $6$ & $(0{,}20)$ & $440$ & $475$ & $44{,}3$ & $50{,}9$ & $+0{,}20$ & $+1{,}57$ & $-0{,}04$ & $12{,}2$ \\
+        $7$ & $(0{,}20)$ & $474$ & $511$ & $50{,}6$ & $58{,}0$ & $+0{,}25$ & $+1{,}36$ & $-0{,}04$ & $23{,}2$ \\
+        $8$ & $(0{,}20)$ & $502$ & $544$ & $58{,}6$ & $65{,}7$ & $+0{,}25$ & $+1{,}29$ & $-0{,}04$ & $27{,}8$ \\
+        $9$ & $0{,}35$ & $507$ & $535$ & $57{,}5$ & $58{,}7$ & $+0{,}25$ & $+0{,}75$ & $-0{,}04$ & $82{,}3$ \\
+        $\mathbf{10}$ & $\mathbf{0{,}70}$ & $\mathbf{487}$ & $\mathbf{489}$ & $\mathbf{49{,}1}$ & $\mathbf{42{,}9}$ & $\mathbf{+0{,}25}$ & $\mathbf{+0{,}54}$ & $\mathbf{+0{,}00}$ & $\mathbf{97{,}7}$ \\
+        $11$ & $0{,}85$ & $470$ & $481$ & $42{,}2$ & $42{,}1$ & $+0{,}25$ & $+0{,}79$ & $+0{,}36$ & $82{,}1$ \\
+        $12$ & $0{,}90$ & $484$ & $494$ & $43{,}4$ & $43{,}0$ & $+0{,}25$ & $+0{,}79$ & $+0{,}29$ & $81{,}3$ \\
+        \bottomrule
+    \end{tabular}}
+\end{table}

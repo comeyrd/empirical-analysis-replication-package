@@ -1,0 +1,26 @@
+\begin{table}[!htb]
+    \centering
+    \small
+    \caption{Apport de chaque condition, règles réduites re-paramétrées.}
+    \label{tab:rq3_components}
+    \renewcommand{\arraystretch}{1.25}
+    \setlength{\tabcolsep}{4pt}
+    \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+    \begin{tabular}{lccccc}
+        \toprule
+         & & & \multicolumn{3}{c}{\textbf{Excès (pp)}} \\
+        \cmidrule(lr){4-6}
+         & \textbf{Optimum ($\alpha$ ; $S$)} & \textbf{Surcoût $N^*$ [IC à $95\,\%$]} & \textbf{V100 verr.} & \textbf{MI210 verr.} & \textbf{MI210 libres} \\
+        \midrule
+        \multicolumn{6}{l}{\textit{Re-paramétrée sans elle}} \\
+        \quad Sans C0 & $(0{,}80 ; 12)$ & $+15{,}5\;[-8{,}9 ; +36{,}1]$ & $+0{,}25$ & $+0{,}68$ & $+0{,}04$ \\
+        \quad Sans C1 & $(0{,}70 ; 11)$ & $-11{,}8\;[-48{,}6 ; +8{,}3]$ & $+0{,}25$ & $+0{,}71$ & $+0{,}00$ \\
+        \quad Sans C2 & $(0{,}55 ; 10)$ & $+7{,}2\;[-23{,}5 ; +36{,}0]$ & $+0{,}25$ & $+0{,}64$ & $-0{,}04$ \\
+        \midrule
+        \multicolumn{6}{l}{\textit{Re-paramétrée seule}} \\
+        \quad C0 seule & $(0{,}25 ; 10)$ & $-11{,}5\;[-43{,}6 ; +6{,}3]$ & $+0{,}25$ & $+0{,}61$ & $-0{,}04$ \\
+        \quad C1 seule & $(0{,}40 ; 11)$ & $+58{,}6\;[+35{,}6 ; +76{,}0]$ & $+0{,}25$ & $+0{,}71$ & $+0{,}00$ \\
+        \quad C2 seule & $(0{,}60 ; 11)$ & $-7{,}3\;[-34{,}3 ; +12{,}0]$ & $+0{,}30$ & $+0{,}75$ & $-0{,}04$ \\
+        \bottomrule
+    \end{tabular}}
+\end{table}

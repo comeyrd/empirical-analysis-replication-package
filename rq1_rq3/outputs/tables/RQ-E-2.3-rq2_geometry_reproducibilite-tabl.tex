@@ -1,0 +1,28 @@
+\begin{table}[htb]
+    \centering
+    \small
+    \caption{Reproductibilité de la géométrie interne de la distribution sur NVIDIA V100 et AMD MI210.}
+    \label{tab:rq2_geometry_reproducibilite}
+    \renewcommand{\arraystretch}{1.25}
+    \begin{tabular}{lllccc}
+        \toprule
+        \textbf{Plateforme} & \textbf{Horloges} & \textbf{Harnais} & 
+        \textbf{$\Delta\mathcal{P}$ (pp)} & 
+        \textbf{$\Delta\mathcal{C}$ (pp)} & 
+        \textbf{$\Delta\mathcal{T}$ (pp)} \\
+        \midrule
+        \multirow{4}{*}{\textbf{V100}} 
+        & Verrouillées & Complet  & $0{,}066$ & $0{,}107$ & $0{,}610$ \\
+        & Verrouillées & Minimal  & $0{,}045$ & $0{,}100$ & $0{,}502$ \\
+        & Libres       & Complet  & $0{,}214$ & $0{,}201$ & $0{,}577$ \\
+        & Libres       & Minimal  & $0{,}192$ & $0{,}256$ & $0{,}628$ \\
+        \midrule
+        \multirow{4}{*}{\textbf{MI210}} 
+        & Verrouillées & Complet  & $0{,}314$ & $0{,}093$ & $0{,}206$ \\
+        & Verrouillées & Minimal  & $0{,}332$ & $0{,}107$ & $0{,}220$ \\
+        & Libres       & Complet  & $0{,}271$ & $0{,}083$ & $0{,}185$ \\
+        & Libres       & Minimal  & $0{,}233$ & $0{,}071$ & $0{,}162$ \\
+        \bottomrule
+    \end{tabular}
+    \vspace{0.15cm}
+\end{table}

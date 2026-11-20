@@ -1,0 +1,28 @@
+{
+  "stable": [
+    "V100 verrouillées",
+    "MI210 verrouillées",
+    "MI210 libres"
+  ],
+  "n_max": 600,
+  "alpha": 0.7,
+  "s": 10,
+  "c0_only": {
+    "alpha": 0.25,
+    "s": 10
+  },
+  "train_campaigns": [
+    0,
+    1,
+    2,
+    4,
+    5,
+    7,
+    8
+  ],
+  "test_campaigns": [
+    3,
+    6,
+    9
+  ]
+}

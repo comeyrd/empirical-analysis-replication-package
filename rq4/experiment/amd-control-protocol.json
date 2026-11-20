@@ -1,0 +1,5230 @@
+{
+  "baseliner_version": "1.0.0",
+  "presets": {
+    "Gemmstridedhi64": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Batched": {
+            "batch_count": {
+              "description": "Number of batches",
+              "value": "5"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmstridedzi64": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "{0.000000 ,0.000000}"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "{1.000000 ,1.000000}"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Batched": {
+            "batch_count": {
+              "description": "Number of batches",
+              "value": "5"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmstridedc": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "{0.000000 ,0.000000}"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "{1.000000 ,1.000000}"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Batched": {
+            "batch_count": {
+              "description": "Number of batches",
+              "value": "5"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmstridedh": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Batched": {
+            "batch_count": {
+              "description": "Number of batches",
+              "value": "5"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmstrideddi64": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Batched": {
+            "batch_count": {
+              "description": "Number of batches",
+              "value": "5"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmstridedsi64": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Batched": {
+            "batch_count": {
+              "description": "Number of batches",
+              "value": "5"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmbatchedh": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Batched": {
+            "batch_count": {
+              "description": "Number of batches",
+              "value": "5"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmbatchedzi64": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "{0.000000 ,0.000000}"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "{1.000000 ,1.000000}"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Batched": {
+            "batch_count": {
+              "description": "Number of batches",
+              "value": "5"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmbatchedz": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "{0.000000 ,0.000000}"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "{1.000000 ,1.000000}"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Batched": {
+            "batch_count": {
+              "description": "Number of batches",
+              "value": "5"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmbatchedci64": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "{0.000000 ,0.000000}"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "{1.000000 ,1.000000}"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Batched": {
+            "batch_count": {
+              "description": "Number of batches",
+              "value": "5"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmbatchedc": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "{0.000000 ,0.000000}"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "{1.000000 ,1.000000}"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Batched": {
+            "batch_count": {
+              "description": "Number of batches",
+              "value": "5"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmbatchedd": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Batched": {
+            "batch_count": {
+              "description": "Number of batches",
+              "value": "5"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmbatchedhi64": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Batched": {
+            "batch_count": {
+              "description": "Number of batches",
+              "value": "5"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmbatcheddi64": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Batched": {
+            "batch_count": {
+              "description": "Number of batches",
+              "value": "5"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmbatchedsi64": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Batched": {
+            "batch_count": {
+              "description": "Number of batches",
+              "value": "5"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmzex": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "{0.000000 ,0.000000}"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "{1.000000 ,1.000000}"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "GemmEx": {
+            "gemm_flags": {
+              "description": "Gemm Flags",
+              "value": "0"
+            },
+            "solution_index": {
+              "description": "What solution to choose?",
+              "value": "0"
+            },
+            "algo": {
+              "description": "What algo should the GemmEx Use ?",
+              "value": "rocblas_gemm_algo_standard"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmstrideds": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Batched": {
+            "batch_count": {
+              "description": "Number of batches",
+              "value": "5"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmcex": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "{0.000000 ,0.000000}"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "{1.000000 ,1.000000}"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "GemmEx": {
+            "gemm_flags": {
+              "description": "Gemm Flags",
+              "value": "0"
+            },
+            "solution_index": {
+              "description": "What solution to choose?",
+              "value": "0"
+            },
+            "algo": {
+              "description": "What algo should the GemmEx Use ?",
+              "value": "rocblas_gemm_algo_standard"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmi8i32i32i64ex": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "GemmEx": {
+            "gemm_flags": {
+              "description": "Gemm Flags",
+              "value": "0"
+            },
+            "solution_index": {
+              "description": "What solution to choose?",
+              "value": "0"
+            },
+            "algo": {
+              "description": "What algo should the GemmEx Use ?",
+              "value": "rocblas_gemm_algo_standard"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmbfssex": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "GemmEx": {
+            "gemm_flags": {
+              "description": "Gemm Flags",
+              "value": "0"
+            },
+            "solution_index": {
+              "description": "What solution to choose?",
+              "value": "0"
+            },
+            "algo": {
+              "description": "What algo should the GemmEx Use ?",
+              "value": "rocblas_gemm_algo_standard"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmc": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "{0.000000 ,0.000000}"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "{1.000000 ,1.000000}"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmsi64": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmstridedci64": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "{0.000000 ,0.000000}"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "{1.000000 ,1.000000}"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Batched": {
+            "batch_count": {
+              "description": "Number of batches",
+              "value": "5"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmhex": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "GemmEx": {
+            "gemm_flags": {
+              "description": "Gemm Flags",
+              "value": "0"
+            },
+            "solution_index": {
+              "description": "What solution to choose?",
+              "value": "0"
+            },
+            "algo": {
+              "description": "What algo should the GemmEx Use ?",
+              "value": "rocblas_gemm_algo_standard"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmzi64ex": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "{0.000000 ,0.000000}"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "{1.000000 ,1.000000}"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "GemmEx": {
+            "gemm_flags": {
+              "description": "Gemm Flags",
+              "value": "0"
+            },
+            "solution_index": {
+              "description": "What solution to choose?",
+              "value": "0"
+            },
+            "algo": {
+              "description": "What algo should the GemmEx Use ?",
+              "value": "rocblas_gemm_algo_standard"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmci64": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "{0.000000 ,0.000000}"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "{1.000000 ,1.000000}"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmsi64ex": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "GemmEx": {
+            "gemm_flags": {
+              "description": "Gemm Flags",
+              "value": "0"
+            },
+            "solution_index": {
+              "description": "What solution to choose?",
+              "value": "0"
+            },
+            "algo": {
+              "description": "What algo should the GemmEx Use ?",
+              "value": "rocblas_gemm_algo_standard"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmhshex": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "GemmEx": {
+            "gemm_flags": {
+              "description": "Gemm Flags",
+              "value": "0"
+            },
+            "solution_index": {
+              "description": "What solution to choose?",
+              "value": "0"
+            },
+            "algo": {
+              "description": "What algo should the GemmEx Use ?",
+              "value": "rocblas_gemm_algo_standard"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemms": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmd": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmdi64ex": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "GemmEx": {
+            "gemm_flags": {
+              "description": "Gemm Flags",
+              "value": "0"
+            },
+            "solution_index": {
+              "description": "What solution to choose?",
+              "value": "0"
+            },
+            "algo": {
+              "description": "What algo should the GemmEx Use ?",
+              "value": "rocblas_gemm_algo_standard"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmhssex": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "GemmEx": {
+            "gemm_flags": {
+              "description": "Gemm Flags",
+              "value": "0"
+            },
+            "solution_index": {
+              "description": "What solution to choose?",
+              "value": "0"
+            },
+            "algo": {
+              "description": "What algo should the GemmEx Use ?",
+              "value": "rocblas_gemm_algo_standard"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmdi64": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmzi64": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "{0.000000 ,0.000000}"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "{1.000000 ,1.000000}"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmstridedd": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Batched": {
+            "batch_count": {
+              "description": "Number of batches",
+              "value": "5"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmdex": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "GemmEx": {
+            "gemm_flags": {
+              "description": "Gemm Flags",
+              "value": "0"
+            },
+            "solution_index": {
+              "description": "What solution to choose?",
+              "value": "0"
+            },
+            "algo": {
+              "description": "What algo should the GemmEx Use ?",
+              "value": "rocblas_gemm_algo_standard"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmstridedz": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "{0.000000 ,0.000000}"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "{1.000000 ,1.000000}"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Batched": {
+            "batch_count": {
+              "description": "Number of batches",
+              "value": "5"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmci64ex": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "{0.000000 ,0.000000}"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "{1.000000 ,1.000000}"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "GemmEx": {
+            "gemm_flags": {
+              "description": "Gemm Flags",
+              "value": "0"
+            },
+            "solution_index": {
+              "description": "What solution to choose?",
+              "value": "0"
+            },
+            "algo": {
+              "description": "What algo should the GemmEx Use ?",
+              "value": "rocblas_gemm_algo_standard"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmz": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "{0.000000 ,0.000000}"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "{1.000000 ,1.000000}"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmh": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmbatcheds": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Batched": {
+            "batch_count": {
+              "description": "Number of batches",
+              "value": "5"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmi8i32i32ex": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "GemmEx": {
+            "gemm_flags": {
+              "description": "Gemm Flags",
+              "value": "0"
+            },
+            "solution_index": {
+              "description": "What solution to choose?",
+              "value": "0"
+            },
+            "algo": {
+              "description": "What algo should the GemmEx Use ?",
+              "value": "rocblas_gemm_algo_standard"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmsex": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "GemmEx": {
+            "gemm_flags": {
+              "description": "Gemm Flags",
+              "value": "0"
+            },
+            "solution_index": {
+              "description": "What solution to choose?",
+              "value": "0"
+            },
+            "algo": {
+              "description": "What algo should the GemmEx Use ?",
+              "value": "rocblas_gemm_algo_standard"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmhi64": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmbfssi64ex": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "GemmEx": {
+            "gemm_flags": {
+              "description": "Gemm Flags",
+              "value": "0"
+            },
+            "solution_index": {
+              "description": "What solution to choose?",
+              "value": "0"
+            },
+            "algo": {
+              "description": "What algo should the GemmEx Use ?",
+              "value": "rocblas_gemm_algo_standard"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmhi64ex": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "GemmEx": {
+            "gemm_flags": {
+              "description": "Gemm Flags",
+              "value": "0"
+            },
+            "solution_index": {
+              "description": "What solution to choose?",
+              "value": "0"
+            },
+            "algo": {
+              "description": "What algo should the GemmEx Use ?",
+              "value": "rocblas_gemm_algo_standard"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmhshi64ex": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "GemmEx": {
+            "gemm_flags": {
+              "description": "Gemm Flags",
+              "value": "0"
+            },
+            "solution_index": {
+              "description": "What solution to choose?",
+              "value": "0"
+            },
+            "algo": {
+              "description": "What algo should the GemmEx Use ?",
+              "value": "rocblas_gemm_algo_standard"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmhssi64ex": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "GemmEx": {
+            "gemm_flags": {
+              "description": "Gemm Flags",
+              "value": "0"
+            },
+            "solution_index": {
+              "description": "What solution to choose?",
+              "value": "0"
+            },
+            "algo": {
+              "description": "What algo should the GemmEx Use ?",
+              "value": "rocblas_gemm_algo_standard"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmbfsbfex": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "GemmEx": {
+            "gemm_flags": {
+              "description": "Gemm Flags",
+              "value": "0"
+            },
+            "solution_index": {
+              "description": "What solution to choose?",
+              "value": "0"
+            },
+            "algo": {
+              "description": "What algo should the GemmEx Use ?",
+              "value": "rocblas_gemm_algo_standard"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Gemmbfsbfi64ex": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "GemmArgs": {
+            "beta": {
+              "description": "Scaling factor for C",
+              "value": "0.000000"
+            },
+            "alpha": {
+              "description": "Scaling factor for A*B",
+              "value": "1.000000"
+            }
+          },
+          "GemmDims": {
+            "alignment_block": {
+              "description": "To a multiple of what the dimensions should snap to?",
+              "value": "64"
+            },
+            "n": {
+              "description": "Cols of B and C",
+              "value": "256"
+            },
+            "k": {
+              "description": "Cols of A / rows of B",
+              "value": "256"
+            },
+            "m": {
+              "description": "Rows of A and C",
+              "value": "256"
+            }
+          },
+          "GemmEx": {
+            "gemm_flags": {
+              "description": "Gemm Flags",
+              "value": "0"
+            },
+            "solution_index": {
+              "description": "What solution to choose?",
+              "value": "0"
+            },
+            "algo": {
+              "description": "What algo should the GemmEx Use ?",
+              "value": "rocblas_gemm_algo_standard"
+            }
+          },
+          "Gemm": {
+            "transB": {
+              "description": "The Operation to apply on B",
+              "value": "rocblas_operation_none"
+            },
+            "transA": {
+              "description": "The Operation to apply on A",
+              "value": "rocblas_operation_none"
+            }
+          },
+          "Workload": {
+            "validation_type": {
+              "description": "How the workload should be validated",
+              "value": "Reference"
+            },
+            "validation_path": {
+              "description": "if the validation is file based, the path where the comparison files is located",
+              "value": ""
+            },
+            "seed": {
+              "description": "The seed used for the generation of input data",
+              "value": "333"
+            },
+            "work_size": {
+              "description": "The work size to apply, 1 = 32MFlop & 1 = 1MB",
+              "value": "50"
+            }
+          }
+        }
+      }
+    },
+    "Benchmark": {
+      "minimal": {
+        "description": "Minimal harness of the main experiment",
+        "options": {
+          "Benchmark": {
+            "validate_workload": {
+              "description": "If you want the workload results to be validated",
+              "value": "0"
+            },
+            "max_gpu_temp": {
+              "description": "If warm_cool, the minimum accepted temperature before cooling down the GPU",
+              "value": "60.000000"
+            },
+            "warm_cool_timeout": {
+              "description": "How long the benchmark warms or cool before throwing",
+              "value": "3"
+            },
+            "minimal_batch_duration": {
+              "description": "If dynamic batch size is set tu true, how long a batch should minimaly be",
+              "value": "10.000000"
+            },
+            "min_gpu_temp": {
+              "description": "If warm_cool, the minimum accepted temperature before warming up the GPU",
+              "value": "45.000000"
+            },
+            "batch_size": {
+              "description": "The size of the batch",
+              "value": "25"
+            },
+            "warmup": {
+              "description": "Having a warmup run",
+              "value": "0"
+            },
+            "flush": {
+              "description": "Enables the flushing of the L2 cache",
+              "value": "0"
+            },
+            "block_queue_size": {
+              "description": "The max size of the blocking queue",
+              "value": "64"
+            },
+            "dynamic_batch": {
+              "description": "If the batch size is dynamic",
+              "value": "0"
+            },
+            "warm_cool": {
+              "description": "Does the Benchmark actively warm or cool the GPU",
+              "value": "0"
+            },
+            "block_duration": {
+              "description": "Duration of the blocking kernel (in ms)",
+              "value": "1000.000000"
+            },
+            "block": {
+              "description": "Using a blocking kernel",
+              "value": "0"
+            }
+          }
+        }
+      },
+      "full": {
+        "description": "Full harness of the main experiment",
+        "options": {
+          "Benchmark": {
+            "validate_workload": {
+              "description": "If you want the workload results to be validated",
+              "value": "0"
+            },
+            "max_gpu_temp": {
+              "description": "If warm_cool, the minimum accepted temperature before cooling down the GPU",
+              "value": "60.000000"
+            },
+            "warm_cool_timeout": {
+              "description": "How long the benchmark warms or cool before throwing",
+              "value": "3"
+            },
+            "minimal_batch_duration": {
+              "description": "If dynamic batch size is set tu true, how long a batch should minimaly be",
+              "value": "10.000000"
+            },
+            "min_gpu_temp": {
+              "description": "If warm_cool, the minimum accepted temperature before warming up the GPU",
+              "value": "45.000000"
+            },
+            "batch_size": {
+              "description": "The size of the batch",
+              "value": "25"
+            },
+            "warmup": {
+              "description": "Having a warmup run",
+              "value": "1"
+            },
+            "flush": {
+              "description": "Enables the flushing of the L2 cache",
+              "value": "1"
+            },
+            "block_queue_size": {
+              "description": "The max size of the blocking queue",
+              "value": "64"
+            },
+            "dynamic_batch": {
+              "description": "If the batch size is dynamic",
+              "value": "1"
+            },
+            "warm_cool": {
+              "description": "Does the Benchmark actively warm or cool the GPU",
+              "value": "0"
+            },
+            "block_duration": {
+              "description": "Duration of the blocking kernel (in ms)",
+              "value": "1000.000000"
+            },
+            "block": {
+              "description": "Using a blocking kernel",
+              "value": "1"
+            }
+          }
+        }
+      }
+    },
+    "StableMedianStoppingCriterion": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "StableMedianStoppingCriterion": {
+            "window": {
+              "description": "Number of consecutive batches in the observation window (S, >= 3)",
+              "value": "10"
+            },
+            "alpha": {
+              "description": "Tolerance factor: tol = alpha * RCV_OQAD",
+              "value": "0.700000"
+            }
+          },
+          "StoppingCriterion": {
+            "max_nb_repetition": {
+              "description": "Maximum number of repetitions",
+              "value": "600"
+            }
+          }
+        }
+      }
+    },
+    "StableMedianC0StoppingCriterion": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "StableMedianC0StoppingCriterion": {
+            "window": {
+              "description": "Number of consecutive batches in the observation window (S, >= 3)",
+              "value": "10"
+            },
+            "alpha": {
+              "description": "Tolerance factor: tol = alpha * RCV_OQAD",
+              "value": "0.250000"
+            }
+          },
+          "StoppingCriterion": {
+            "max_nb_repetition": {
+              "description": "Maximum number of repetitions",
+              "value": "600"
+            }
+          }
+        }
+      }
+    },
+    "StoppingCriterion": {
+      "n600": {
+        "description": "Fixed budget of 600 executions (N_max of the SMS rules)",
+        "options": {
+          "StoppingCriterion": {
+            "max_nb_repetition": {
+              "description": "Maximum number of repetitions",
+              "value": "600"
+            }
+          }
+        }
+      },
+      "n2000": {
+        "description": "Fixed budget of 2000 executions (reference budget of the stopping-criterion study)",
+        "options": {
+          "StoppingCriterion": {
+            "max_nb_repetition": {
+              "description": "Maximum number of repetitions",
+              "value": "2000"
+            }
+          }
+        }
+      }
+    },
+    "VariationStoppingCriterion": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "VariationSC": {
+            "min_duration_ms": {
+              "description": "Minimum duration before stopping (ms)",
+              "value": "1000.000000"
+            },
+            "noise_tolerance": {
+              "description": "Noise tolerance in percent",
+              "value": "1.000000"
+            }
+          },
+          "StoppingCriterion": {
+            "max_nb_repetition": {
+              "description": "Maximum number of repetitions",
+              "value": "2000"
+            }
+          }
+        }
+      }
+    },
+    "EntropyStoppingCriterion": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "EntropySC": {
+            "min_samples": {
+              "description": "Minimum samples before checking entropy",
+              "value": "10"
+            },
+            "min_r2": {
+              "description": "Minimum R-squared for regression stability",
+              "value": "0.360000"
+            },
+            "max_angle": {
+              "description": "Maximum allowed entropy slope angle (deg)",
+              "value": "0.048000"
+            }
+          },
+          "StoppingCriterion": {
+            "max_nb_repetition": {
+              "description": "Maximum number of repetitions",
+              "value": "2000"
+            }
+          }
+        }
+      }
+    },
+    "StdRelStoppingCriterion": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "StdRelSC": {
+            "noise_stability_window": {
+              "description": "Minimum noise entries before checking stability",
+              "value": "64"
+            },
+            "noise_stability_threshold": {
+              "description": "Rel stdev of noise below which noise is considered stable",
+              "value": "0.050000"
+            },
+            "max_noise": {
+              "description": "Max relative stdev in percent",
+              "value": "0.500000"
+            },
+            "min_time_ms": {
+              "description": "Minimum accumulated GPU time (ms)",
+              "value": "500.000000"
+            },
+            "min_samples": {
+              "description": "Minimum samples before checking noise",
+              "value": "10"
+            }
+          },
+          "StoppingCriterion": {
+            "max_nb_repetition": {
+              "description": "Maximum number of repetitions",
+              "value": "200000"
+            }
+          }
+        }
+      }
+    },
+    "hip": {
+      "default": {
+        "description": "Default preset",
+        "options": {
+          "Backend": {
+            "max_clock_value": {
+              "description": "-1 means locking to the base clock, else is locking to a specific frequency",
+              "value": "-1"
+            },
+            "min_clock_value": {
+              "description": "-1 means locking to the base clock, else is locking to a specific frequency",
+              "value": "-1"
+            },
+            "lock_clock": {
+              "description": "If the clocks should be locked",
+              "value": "0"
+            },
+            "device": {
+              "description": "The device number to run on",
+              "value": "0"
+            }
+          }
+        }
+      }
+    }
+  },
+  "stats_presets": {
+    "default": {
+      "description": "Stats of the SMS experiment",
+      "stat_names": [
+        "Median",
+        "Mean",
+        "CoefficientOfVariation",
+        "TraceCoefficientOfVariation",
+        "RCVOQAD",
+        "GpuAccumulatedTime"
+      ],
+      "stat_options": {}
+    },
+    "corpus": {
+      "description": "Default preset of the main corpus (Median, Mean, CoefficientOfVariation)",
+      "stat_names": [
+        "Median",
+        "Mean",
+        "CoefficientOfVariation"
+      ],
+      "stat_options": {}
+    }
+  },
+  "recipes": {
+    "a-corpus": {
+      "description": "H-D control (a): minimal, fixed 2000, main-corpus stats preset",
+      "benchmark": {
+        "impl": "Benchmark",
+        "preset": "minimal"
+      },
+      "stopping": {
+        "impl": "StoppingCriterion",
+        "preset": "n2000"
+      },
+      "stats": {
+        "preset": "corpus"
+      },
+      "sweep": {
+        "strategy": "FullGrid",
+        "axes": [
+          {
+            "interface": "Workload",
+            "option": "work_size",
+            "hint": {
+              "policy": "Enumerated",
+              "min": "1",
+              "max": "256",
+              "step": "1",
+              "enumerated": [
+                "8",
+                "32",
+                "128",
+                "512"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "b-sms": {
+      "description": "H-D control (b): minimal, fixed 2000, SMS stats preset",
+      "benchmark": {
+        "impl": "Benchmark",
+        "preset": "minimal"
+      },
+      "stopping": {
+        "impl": "StoppingCriterion",
+        "preset": "n2000"
+      },
+      "stats": {
+        "preset": "default"
+      },
+      "sweep": {
+        "strategy": "FullGrid",
+        "axes": [
+          {
+            "interface": "Workload",
+            "option": "work_size",
+            "hint": {
+              "policy": "Enumerated",
+              "min": "1",
+              "max": "256",
+              "step": "1",
+              "enumerated": [
+                "8",
+                "32",
+                "128",
+                "512"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "campaigns": [
+    {
+      "name": "H-D a-corpus 1",
+      "recipe": "a-corpus",
+      "workloads": [
+        {
+          "impl": "Gemmstridedhi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedzi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedc",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedh",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstrideddi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedsi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedh",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedzi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedz",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedci64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedc",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedd",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedhi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatcheddi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedsi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmzex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstrideds",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmcex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmi8i32i32i64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfssex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmc",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmsi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedci64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmzi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmci64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmsi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhshex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemms",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmd",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmdi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhssex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmdi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmzi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedd",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmdex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedz",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmci64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmz",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmh",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatcheds",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmi8i32i32ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmsex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfssi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhshi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhssi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfsbfex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfsbfi64ex",
+          "preset": "default"
+        }
+      ],
+      "backends": [
+        {
+          "impl": "hip",
+          "preset": "default"
+        }
+      ],
+      "on_incompatible": "Skip"
+    },
+    {
+      "name": "H-D b-sms 1",
+      "recipe": "b-sms",
+      "workloads": [
+        {
+          "impl": "Gemmstridedhi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedzi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedc",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedh",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstrideddi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedsi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedh",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedzi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedz",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedci64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedc",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedd",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedhi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatcheddi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedsi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmzex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstrideds",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmcex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmi8i32i32i64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfssex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmc",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmsi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedci64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmzi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmci64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmsi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhshex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemms",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmd",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmdi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhssex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmdi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmzi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedd",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmdex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedz",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmci64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmz",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmh",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatcheds",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmi8i32i32ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmsex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfssi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhshi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhssi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfsbfex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfsbfi64ex",
+          "preset": "default"
+        }
+      ],
+      "backends": [
+        {
+          "impl": "hip",
+          "preset": "default"
+        }
+      ],
+      "on_incompatible": "Skip"
+    },
+    {
+      "name": "H-D a-corpus 2",
+      "recipe": "a-corpus",
+      "workloads": [
+        {
+          "impl": "Gemmstridedhi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedzi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedc",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedh",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstrideddi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedsi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedh",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedzi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedz",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedci64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedc",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedd",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedhi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatcheddi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedsi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmzex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstrideds",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmcex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmi8i32i32i64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfssex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmc",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmsi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedci64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmzi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmci64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmsi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhshex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemms",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmd",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmdi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhssex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmdi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmzi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedd",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmdex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedz",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmci64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmz",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmh",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatcheds",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmi8i32i32ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmsex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfssi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhshi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhssi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfsbfex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfsbfi64ex",
+          "preset": "default"
+        }
+      ],
+      "backends": [
+        {
+          "impl": "hip",
+          "preset": "default"
+        }
+      ],
+      "on_incompatible": "Skip"
+    },
+    {
+      "name": "H-D b-sms 2",
+      "recipe": "b-sms",
+      "workloads": [
+        {
+          "impl": "Gemmstridedhi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedzi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedc",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedh",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstrideddi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedsi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedh",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedzi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedz",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedci64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedc",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedd",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedhi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatcheddi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedsi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmzex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstrideds",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmcex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmi8i32i32i64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfssex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmc",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmsi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedci64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmzi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmci64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmsi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhshex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemms",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmd",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmdi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhssex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmdi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmzi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedd",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmdex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedz",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmci64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmz",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmh",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatcheds",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmi8i32i32ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmsex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfssi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhshi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhssi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfsbfex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfsbfi64ex",
+          "preset": "default"
+        }
+      ],
+      "backends": [
+        {
+          "impl": "hip",
+          "preset": "default"
+        }
+      ],
+      "on_incompatible": "Skip"
+    },
+    {
+      "name": "H-D a-corpus 3",
+      "recipe": "a-corpus",
+      "workloads": [
+        {
+          "impl": "Gemmstridedhi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedzi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedc",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedh",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstrideddi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedsi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedh",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedzi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedz",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedci64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedc",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedd",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedhi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatcheddi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedsi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmzex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstrideds",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmcex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmi8i32i32i64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfssex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmc",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmsi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedci64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmzi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmci64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmsi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhshex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemms",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmd",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmdi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhssex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmdi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmzi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedd",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmdex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedz",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmci64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmz",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmh",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatcheds",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmi8i32i32ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmsex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfssi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhshi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhssi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfsbfex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfsbfi64ex",
+          "preset": "default"
+        }
+      ],
+      "backends": [
+        {
+          "impl": "hip",
+          "preset": "default"
+        }
+      ],
+      "on_incompatible": "Skip"
+    },
+    {
+      "name": "H-D b-sms 3",
+      "recipe": "b-sms",
+      "workloads": [
+        {
+          "impl": "Gemmstridedhi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedzi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedc",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedh",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstrideddi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedsi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedh",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedzi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedz",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedci64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedc",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedd",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedhi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatcheddi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatchedsi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmzex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstrideds",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmcex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmi8i32i32i64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfssex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmc",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmsi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedci64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmzi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmci64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmsi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhshex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemms",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmd",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmdi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhssex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmdi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmzi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedd",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmdex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmstridedz",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmci64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmz",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmh",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbatcheds",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmi8i32i32ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmsex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhi64",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfssi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhshi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmhssi64ex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfsbfex",
+          "preset": "default"
+        },
+        {
+          "impl": "Gemmbfsbfi64ex",
+          "preset": "default"
+        }
+      ],
+      "backends": [
+        {
+          "impl": "hip",
+          "preset": "default"
+        }
+      ],
+      "on_incompatible": "Skip"
+    }
+  ]
+}
